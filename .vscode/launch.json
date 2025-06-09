@@ -1,0 +1,55 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Next.js Dev",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["dev"],
+            "cwd": "${workspaceFolder}/client",
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug GraphQL Server",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["server"],
+            "cwd": "${workspaceFolder}/client",
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Tests",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["test"],
+            "cwd": "${workspaceFolder}/client",
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Tests (Watch Mode)",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["test:watch"],
+            "cwd": "${workspaceFolder}/client",
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/client"
+        }
+    ]
+}

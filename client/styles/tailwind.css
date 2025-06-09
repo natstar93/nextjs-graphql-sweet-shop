@@ -1,0 +1,14 @@
+@config "../tailwind.config.mjs";
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply font-monserrat bg-neutral-layer-dark text-neutral-detail-bolder m-0
+    flex min-h-screen flex-col p-0;
+  }
+}

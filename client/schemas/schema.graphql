@@ -1,0 +1,147 @@
+"""Exposes a URL that specifies the behavior of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behavior of this scalar."""
+  url: String!
+) on SCALAR
+
+"""
+Indicates exactly one field must be supplied and this field must not be `null`.
+"""
+directive @oneOf on INPUT_OBJECT
+
+type ListMetadata {
+  count: Int
+}
+
+type Mutation {
+  createProduct(name: String!, power: String!, description: String!, price: Int!, quantity: Int!, brand: String!, weight: Int!, height: Float!, width: Float!, length: Float!, model_code: String!, colour: String!, img_url: String!): Product
+  createManyProduct(data: [ProductInput]): [Product]
+  updateProduct(id: ID!, name: String, power: String, description: String, price: Int, quantity: Int, brand: String, weight: Int, height: Float, width: Float, length: Float, model_code: String, colour: String, img_url: String): Product
+  removeProduct(id: ID!): Product
+  deleteProduct(id: ID!): Product
+}
+
+type Product {
+  id: ID!
+  name: String!
+  power: String!
+  description: String!
+  price: Int!
+  quantity: Int!
+  brand: String!
+  weight: Int!
+  height: Float!
+  width: Float!
+  length: Float!
+  model_code: String!
+  colour: String!
+  img_url: String!
+}
+
+input ProductFilter {
+  q: String
+  ids: [ID]
+  id: ID
+  name: String
+  power: String
+  description: String
+  price: Int
+  quantity: Int
+  brand: String
+  weight: Int
+  height: Float
+  width: Float
+  length: Float
+  model_code: String
+  colour: String
+  img_url: String
+  id_neq: ID
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_neq: String
+  power_lt: String
+  power_lte: String
+  power_gt: String
+  power_gte: String
+  power_neq: String
+  description_lt: String
+  description_lte: String
+  description_gt: String
+  description_gte: String
+  description_neq: String
+  price_lt: Int
+  price_lte: Int
+  price_gt: Int
+  price_gte: Int
+  price_neq: Int
+  quantity_lt: Int
+  quantity_lte: Int
+  quantity_gt: Int
+  quantity_gte: Int
+  quantity_neq: Int
+  brand_lt: String
+  brand_lte: String
+  brand_gt: String
+  brand_gte: String
+  brand_neq: String
+  weight_lt: Int
+  weight_lte: Int
+  weight_gt: Int
+  weight_gte: Int
+  weight_neq: Int
+  height_lt: Float
+  height_lte: Float
+  height_gt: Float
+  height_gte: Float
+  height_neq: Float
+  width_lt: Float
+  width_lte: Float
+  width_gt: Float
+  width_gte: Float
+  width_neq: Float
+  length_lt: Float
+  length_lte: Float
+  length_gt: Float
+  length_gte: Float
+  length_neq: Float
+  model_code_lt: String
+  model_code_lte: String
+  model_code_gt: String
+  model_code_gte: String
+  model_code_neq: String
+  colour_lt: String
+  colour_lte: String
+  colour_gt: String
+  colour_gte: String
+  colour_neq: String
+  img_url_lt: String
+  img_url_lte: String
+  img_url_gt: String
+  img_url_gte: String
+  img_url_neq: String
+}
+
+input ProductInput {
+  name: String!
+  power: String!
+  description: String!
+  price: Int!
+  quantity: Int!
+  brand: String!
+  weight: Int!
+  height: Float!
+  width: Float!
+  length: Float!
+  model_code: String!
+  colour: String!
+  img_url: String!
+}
+
+type Query {
+  Product(id: ID!): Product
+  allProducts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: ProductFilter): [Product]
+  _allProductsMeta(page: Int, perPage: Int, filter: ProductFilter): ListMetadata
+}
+

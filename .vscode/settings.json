@@ -1,0 +1,16 @@
+{
+    "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    },
+    "[tailwindcss]": {
+        "tailwindCSS.validate": true,
+        "editor.defaultFormatter": "MishaLestev.tailwind-css-language-mode-formatter"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
+}
