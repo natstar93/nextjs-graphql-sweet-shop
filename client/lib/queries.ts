@@ -1,10 +1,11 @@
 import { gql, TypedDocumentNode } from '@apollo/client';
-import { ResponseProductType, ProductType } from '../types/Product';
+// import { ResponseProductType, ProductType } from '../types/Product';
 
 export const GET_PRODUCTS = gql`
   query GetProducts {
-    allProducts {
+    products {
         id
+        name
         description
         price
         packSize: pack_size
@@ -15,10 +16,10 @@ export const GET_PRODUCTS = gql`
   }
 `;
 
-export const GET_PRODUCT_BY_ID:
-TypedDocumentNode<ResponseProductType, ProductType> = gql`
+export const GET_PRODUCT_BY_ID: TypedDocumentNode = gql`
   query GetProduct($id: ID!) {
-    Product(id: $id) {
+    product(id: $id) {
+        id
         name
         description
         price

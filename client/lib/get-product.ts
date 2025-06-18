@@ -5,12 +5,12 @@ import { ProductType } from '../types/Product';
 
 async function getProduct(id: string) {
   try {
-    const { data } = await apolloClient.query<{Product: ProductType}>({
+    const { data } = await apolloClient.query<{product: ProductType}>({
       query: GET_PRODUCT_BY_ID,
       variables: { id },
     });
 
-    if (!data.Product) {
+    if (!data.product) {
       return {
         props: {
           product: null,
@@ -21,7 +21,7 @@ async function getProduct(id: string) {
 
     return {
       props: {
-        product: data.Product,
+        product: data.product,
         error: null,
       },
     };

@@ -9,7 +9,7 @@ export default function Document() {
         <link
           rel="icon"
           type="image/png"
-          href="favicon.png"
+          href="/favicon.png"
           sizes="32x32"
         />
       </Head>

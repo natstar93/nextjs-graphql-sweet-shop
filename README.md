@@ -1,3 +1,5 @@
+
+[Check out my sweet shop on Vercel!](https://nextjs-graphql-sweet-shop-4sell7ksn-natalies-projects-95e9cf97.vercel.app/)
 ## Getting started
 
 ```sh
@@ -13,7 +15,7 @@ npm run dev
 This will do two things:
 
 - Start a Next.js app running in development on <http://localhost:3000>
-- Start a graphQL stub server running on <http://localhost:3001/graphql>
+- Start a graphQL stub server running on <http://localhost:4000/graphql>
 
 ## Running tests
 

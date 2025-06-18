@@ -12,7 +12,7 @@ export default function Home() {
           />
         </figure>
         <p className="my-6 text-primary-main">
-          <Link href="product" className="text-primary-main text-3xl underline">Buy sweets</Link>
+          <Link href="shop/1" className="text-primary-main text-3xl underline">Buy sweets</Link>
         </p>
       </div>
     </main>
